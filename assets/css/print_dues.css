@@ -1,0 +1,57 @@
+  /*!
+   * Custom Printing for Government & Deduction Dues
+   * Jammas INC.,
+   */ 
+
+td {
+  vertical-align: top;
+}
+
+section.invoice > .row {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+@media print {
+  html {
+      padding-bottom: 3cm;
+      padding-left: 1cm;
+      padding-right: 1cm;
+      padding-top: 0cm;
+  }
+  body {
+      /*font-family: Menlo,Monaco,Consolas,"Courier New",monospace;*/
+
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      background: #fff !important;
+      color: #000 !important;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      /*margin: 0 auto;*/
+      text-rendering: optimizeLegibility; 
+
+    }
+  table,tr,td,th {
+      font-size: 10px !important;
+  }
+  .table > thead > tr > th {
+      vertical-align: bottom;
+  }
+
+  section.invoice > .row {
+    page-break-after: always;
+  }
+
+  section.invoice:last-child {
+    page-break-after: avoid;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+
+  p.total {
+    margin-bottom: 0px;
+  }
+
+}
